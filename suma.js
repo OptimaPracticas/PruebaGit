@@ -1,3 +1,4 @@
 function suma() {
-    suma.innerHTML = 5 + 5;
+    document.getElementById("suma").innerHTML = 5;
+    console.log("XD3");
 }
