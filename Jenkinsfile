@@ -22,13 +22,8 @@ node {
 
     stage('Publish') {
         bat 'echo Publishing Test Coverage...'
-		publishHTML (target: [
-        allowMissing: false,
-        alwaysLinkToLastBuild: false,
-        keepAll: true,
-        reportDir: 'coverage',
-        reportFiles: 'index.html',
-        reportName: "RCov Report"
-     ])
+		publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, 
+        reportDir: 'reports', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
+
     }
 }
