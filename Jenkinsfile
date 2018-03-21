@@ -1,5 +1,5 @@
-node {
-    try{
+try{
+        node {
             stage('Initialize') {
                 bat 'echo Initializing...'
                 def node = tool name: 'Node-8.9.0', type: 'jenkins.plugins.nodejs.tools.NodeJSInstallation'
@@ -20,10 +20,11 @@ node {
                 bat 'echo Testing with try/catch...'
                 bat 'npm test'
             }
+
+            //Manuel
+        }
     }catch(e){
         bat 'echo ERROR'
     }finally{
         bat 'echo Finally'
     }
-            //Manuel
-}
