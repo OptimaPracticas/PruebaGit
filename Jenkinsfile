@@ -19,4 +19,9 @@ node {
         bat 'echo Testing...'
         bat 'npm test'
     }
+
+    stage('PruebaMocha') {
+        bat 'echo Mocha...'
+        bat 'mocha'
+    }
 }
