@@ -23,7 +23,7 @@ node {
             stage('Artifact'){
                 //archiveArtifacts artifacts: 'build/libs/**/*.jar', fingerprint: true
                 //junit 'build/reports/**/*.xml'
-                archive "target/**/*"
+                archive 'target/**/*'
                 junit 'target/surefire-reports/*.xml'
             }
     /*stage('Publish') {
