@@ -12,13 +12,19 @@ node {
 
             stage('Build') {
                 bat 'echo Building dependencies...'
-                bat 'npm i'
+               
+               bat 'npm run clean'
+               bat 'npm run build'
             }
 
             stage('Test') {
                 bat 'echo Testing...'
                 bat 'npm test'
             }
+            
+            stage('Artifact'){
+                bat 'echo Artifact...'
+            }
 
-            //jose maría
+
 }
