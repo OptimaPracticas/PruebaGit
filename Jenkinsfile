@@ -20,8 +20,14 @@ try{
                 bat 'echo Testing with try/catch...'
                 bat 'npm test'
             }
-
             stage('Start') {
+                bat 'echo Stopping...'
+                bat 'npm stop'
+                bat 'echo Build...'
+                bat 'npm start'
+            }
+
+            stage('Stop') {
                 bat 'echo Build...'
                 bat 'npm start'
             }
