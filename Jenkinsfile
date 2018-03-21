@@ -23,6 +23,9 @@ node {
     stage('Publish') {
         bat 'echo Publishing Test Coverage...'
 		publishHTML (target: [
+			allowMissing: true,
+			alwaysLinkToLastBuild: false,
+			keepAll: true,
 			reportDir: 'coverage',
 			reportFiles: 'index.html',
 			reportName: "Application Test Coverage"
