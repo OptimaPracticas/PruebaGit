@@ -24,7 +24,7 @@ node {
                 //archiveArtifacts artifacts: 'build/libs/**/*.jar', fingerprint: true
                 //junit 'build/reports/**/*.xml'
                 archive 'target/**/*'
-                junit 'target/surefire-reports/*.xml'
+                junit '*.xml'
             }
     /*stage('Publish') {
         bat 'echo Publishing Test Coverage...'
