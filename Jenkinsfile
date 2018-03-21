@@ -23,6 +23,7 @@ node {
             stage('Artifact'){
                 //archiveArtifacts artifacts: 'build/libs/**/*.jar', fingerprint: true
                 //junit 'build/reports/**/*.xml'
+                bat 'echo'
                 archive 'target/**/*'
                 junit 'build.xml'
             }
