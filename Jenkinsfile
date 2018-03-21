@@ -23,6 +23,8 @@ node {
             stage('Artifact'){
                 //archiveArtifacts artifacts: 'build/libs/**/*.jar', fingerprint: true
                 //junit 'build/reports/**/*.xml'
+                archive "target/**/*"
+                junit 'target/surefire-reports/*.xml'
             }
     /*stage('Publish') {
         bat 'echo Publishing Test Coverage...'
@@ -30,10 +32,4 @@ node {
         reportDir: 'reports', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
 
     }*/
-    post {
-        always {
-            archive "target/**/*"
-            junit 'target/surefire-reports/*.xml'
-        }
-    }
 }
