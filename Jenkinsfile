@@ -21,12 +21,12 @@ node {
     }
 
     stage('Publish') {
-        echo 'Publishing Test Coverage...'
+        bat 'echo Publishing Test Coverage...'
 		publishHTML (target: [
 			allowMissing: false,
 			alwaysLinkToLastBuild: false,
 			keepAll: true,
-			reportDir: 'coverage/lcov-report',
+			reportDir: 'coverage',
 			reportFiles: 'index.html',
 			reportName: "Application Test Coverage"
 		])
