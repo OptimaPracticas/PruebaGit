@@ -24,8 +24,8 @@ node {
                 //archiveArtifacts artifacts: 'build/libs/**/*.jar', fingerprint: true
                 //junit 'build/reports/**/*.xml'
                 bat 'echo'
-                archive 'target/**/*'
-                junit 'build.xml'
+                archive 'target\\**\\*'
+                junit 'target\\reportsJUnit\\*.xml'
             }
     /*stage('Publish') {
         bat 'echo Publishing Test Coverage...'
