@@ -22,7 +22,7 @@ try{
             }
             stage('Start') {
                 bat 'echo Stopping...'
-                bat 'npm stop'
+                //bat 'npm stop'
                 bat 'echo Build...'
                 bat 'npm start'
             }
