@@ -20,7 +20,15 @@ node {
         bat 'npm test'
     }
 
-    stage('PruebaMocha') {
-        bat 'echo Mocha...'
+    stage('Publish') {
+        echo 'Publishing Test Coverage...'
+		publishHTML (target: [
+			allowMissing: false,
+			alwaysLinkToLastBuild: false,
+			keepAll: true,
+			reportDir: 'coverage/lcov-report',
+			reportFiles: 'index.html',
+			reportName: "Application Test Coverage"
+		])
     }
 }
