@@ -13,8 +13,8 @@ node {
             stage('Build') {
                 bat 'echo Building dependencies...'
                
-               bat 'npm clean'
-               bat 'npm build'
+               bat 'npm run clean'
+               bat 'npm run build'
             }
 
             stage('Test') {
