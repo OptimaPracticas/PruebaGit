@@ -22,6 +22,5 @@ node {
 
     stage('PruebaMocha') {
         bat 'echo Mocha...'
-        bat 'mocha'
     }
 }
