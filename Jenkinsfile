@@ -1,5 +1,4 @@
 node {
-    stages{
             stage('Initialize') {
                 bat 'echo Initializing...'
                 def node = tool name: 'Node-8.9.0', type: 'jenkins.plugins.nodejs.tools.NodeJSInstallation'
@@ -31,7 +30,6 @@ node {
         reportDir: 'reports', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
 
     }*/
-    }
     post {
         always {
             archive "target/**/*"
