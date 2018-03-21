@@ -22,7 +22,7 @@ node {
 
     stage('Publish') {
         bat 'echo Publishing Test Coverage...'
-        bat 'echo .'
+        bat 'mkdir reports'
 		publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, 
         reportDir: 'reports', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
 
