@@ -1,5 +1,4 @@
-pipeline {
-    node{
+node {
     stages{
             stage('Initialize') {
                 bat 'echo Initializing...'
@@ -32,7 +31,6 @@ pipeline {
         reportDir: 'reports', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
 
     }*/
-        }
     }
     post {
         always {
