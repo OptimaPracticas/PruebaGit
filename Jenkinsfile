@@ -11,7 +11,7 @@ try{
                 checkout scm
             }
 
-            stage('Build') {
+            stage('Dependencies') {
                 bat 'echo Building dependencies...'
                 bat 'npm i'
             }
@@ -21,6 +21,10 @@ try{
                 bat 'npm test'
             }
 
+            stage('Start') {
+                bat 'echo Build...'
+                bat 'npm start'
+            }
             //Manuel
         }
     }catch(e){
