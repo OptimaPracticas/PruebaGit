@@ -24,7 +24,7 @@ try{
             //Manuel
         }
     }catch(e){
-        bat 'echo ERROR'
+        println 'ERROR'
     }finally{
-        bat 'echo Finally'
+        println 'Finally'
     }
