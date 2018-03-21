@@ -21,8 +21,8 @@ node {
             }
 
             stage('Artifact'){
-                archiveArtifacts artifacts: 'build/libs/**/*.jar', fingerprint: true
-                junit 'build/reports/**/*.xml'
+                //archiveArtifacts artifacts: 'build/libs/**/*.jar', fingerprint: true
+                //junit 'build/reports/**/*.xml'
             }
     /*stage('Publish') {
         bat 'echo Publishing Test Coverage...'
