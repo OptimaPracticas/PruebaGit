@@ -19,12 +19,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/manuellorenzo/PruebaGit.git"
+    "url": "git+https://github.com/OptimaPracticas/PruebaGit.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/manuellorenzo/PruebaGit/issues"
+    "url": "https://github.com/OptimaPracticas/PruebaGit/issues"
   },
-  "homepage": "https://github.com/manuellorenzo/PruebaGit#readme"
+  "homepage": "https://github.com/OptimaPracticas/PruebaGit#readme"
 }
