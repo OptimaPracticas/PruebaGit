@@ -19,4 +19,6 @@ node {
                 bat 'echo Testing...'
                 bat 'npm test'
             }
+            
+            //Manuel
 }
