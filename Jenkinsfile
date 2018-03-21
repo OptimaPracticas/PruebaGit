@@ -19,18 +19,4 @@ node {
                 bat 'echo Testing...'
                 bat 'npm test'
             }
-
-            stage('Artifact'){
-                //archiveArtifacts artifacts: 'build/libs/**/*.jar', fingerprint: true
-                //junit 'build/reports/**/*.xml'
-                bat 'echo'
-                archive 'target\\**\\*'
-                junit 'target\\reportsJUnit\\*.xml'
-            }
-    /*stage('Publish') {
-        bat 'echo Publishing Test Coverage...'
-		publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, 
-        reportDir: 'reports', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
-
-    }*/
 }
