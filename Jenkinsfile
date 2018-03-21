@@ -20,11 +20,14 @@ node {
         bat 'npm test'
     }
 
-    stage('Publish') {
+    stage('Artifact'){
+        archiveArtifacts artifacts: 'build/libs/**/*.jar', fingerprint: true
+        junit 'build/reports/**/*.xml'
+    }
+    /*stage('Publish') {
         bat 'echo Publishing Test Coverage...'
-        bat 'mkdir reports\\HTML_Report'
 		publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, 
         reportDir: 'reports', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
 
-    }
+    }*/
 }
