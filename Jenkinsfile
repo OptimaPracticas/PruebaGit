@@ -17,7 +17,7 @@ node {
             }
 
             stage('Test') {
-                bat 'echo Testing...'
+                bat 'echo Testing with try/catch...'
                 bat 'npm test'
             }
     }catch(e){
