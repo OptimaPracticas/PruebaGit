@@ -26,15 +26,11 @@ try{
                 bat 'echo Build...'
                 bat 'npm start'
             }
-
-            stage('Stop') {
-                bat 'echo Build...'
-                bat 'npm start'
-            }
             //Manuel
         }
     }catch(e){
         println 'ERROR'
     }finally{
+        bat 'npm stop'
         println 'Finally'
     }
