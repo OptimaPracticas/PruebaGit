@@ -1,22 +1,22 @@
 node {
     stage('Initialize') {
-        echo 'Initializing...'
+        echo 'echo Initializing...'
         def node = tool name: 'Node-8.9.0', type: 'jenkins.plugins.nodejs.tools.NodeJSInstallation'
         env.PATH = "${node}/bin:${env.PATH}"
     }
 
     stage('Checkout') {
-        echo 'Getting source code...'
+        echo 'echo Getting source code...'
         checkout scm
     }
 
     stage('Build') {
-        echo 'Building dependencies...'
+        echo 'echo Building dependencies...'
         bat 'npm i'
     }
 
     stage('Test') {
-        echo 'Testing...'
+        bat 'echo Testing...'
         bat 'npm test'
     }
 }
