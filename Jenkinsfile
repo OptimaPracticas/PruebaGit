@@ -18,6 +18,17 @@ node {
             }
 
             stage('Test') {
+                steps {
+                    parallel(
+                        a: {
+                            echo "This is a branch a"
+                        },
+
+                        b: {
+                            echo "This is a branch b"
+                        }
+                    )
+                }
                 bat 'echo Testing...'
                 bat 'npm test'
             }
@@ -26,6 +37,7 @@ node {
                 bat 'echo Deployment...'
                 bat 'npm start'
             }
+
 
 
 }
