@@ -22,8 +22,9 @@ node {
                 bat 'npm test'
             }
             
-            stage('Artifact'){
-                bat 'echo Artifact...'
+            stage('Deployment'){
+                bat 'echo Deployment...'
+                bat 'npm start'
             }
 
 
